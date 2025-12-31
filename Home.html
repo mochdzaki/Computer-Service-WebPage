@@ -86,43 +86,65 @@
   <section class="services" id="services">
     <span class="section-tag center">Our Service</span>
     <h2>What We Offer For Our Customers</h2>
-    <div class="service-grid">
+    
+    <div class="service-grid" id="serviceGrid">
       <div class="service-card">
         <h3>Laptop & Desktop Repair</h3>
-        <p>Complete repair services for laptops and desktop computers.</p>
+        <p>Diagnosis and repair of hardware and system issues across laptops and desktop computers.</p>
       </div>
       <div class="service-card">
         <h3>Hardware Replacement</h3>
-        <p>Replacement of screens, keyboards, batteries, storage, and RAM.</p>
+        <p>Component-level replacement including display panels, keyboards, batteries, storage drives, and memory modules.</p>
       </div>
       <div class="service-card">
         <h3>Software Troubleshooting</h3>
-        <p>Fix system errors and install or reinstall operating systems.</p>
+        <p>Resolution of operating system errors, driver issues, and clean OS installation or reinstallation.</p>
       </div>
       <div class="service-card">
         <h3>Virus & Malware Removal</h3>
-        <p>Remove harmful software and restore system security.</p>
+        <p>Detection, isolation, and removal of malicious software to restore system security and stability.</p>
+      </div>
+      <div class="service-card">
+        <h3>Data Backup & Recovery</h3>
+        <p>Data protection, backup solutions, and recovery from corrupted or failing storage devices.</p>
+      </div>
+      <div class="service-card">
+        <h3>System Optimization & Performance Tuning</h3>
+        <p>Performance improvement through system cleanup, configuration optimization, and resource management.</p>
       </div>
     </div>
+  
+    <div class="scrollbar-container">
+      <div class="scrollbar-segment" id="seg1"></div>
+      <div class="scrollbar-segment" id="seg2"></div>
+    </div>
   </section>
-
+  
   <!-- PROCESS -->
   <section class="process">
-    <h2>How Does The Process Work To Provide Service?</h2>
-    <div class="process-grid">
-      <div class="process-card">
-        <h3>Step 1</h3>
-        <h4>Contact Us Or Bring Your Device</h4>
-        <p>Get in touch with us or bring your computer for inspection.</p>
-      </div>
-      <div class="process-card">
-        <h3>Step 2</h3>
-        <h4>Diagnosis And Evaluation</h4>
-        <p>We identify the issue and recommend the best solution.</p>
+    <div class="process-header">
+      <h2>How Does The Process Work<br>To Provide Service?</h2>
+  
+      <div class="process-controls">
+        <button onclick="scrollProcess(-1)">‹</button>
+        <button onclick="scrollProcess(1)">›</button>
       </div>
     </div>
+  
+    <div class="scroll-container" id="processContainer">
+      <div class="process-scroll">
+        <div class="process-card">Step 1<br>Contact Us</div>
+        <div class="process-card">Step 2<br>Diagnosis</div>
+        <div class="process-card">Step 3<br>Repair</div>
+        <div class="process-card">Step 4<br>Testing</div>
+      </div>
+    </div>
+  
+    <div class="scroll-progress">
+      <span id="processProgress"></span>
+    </div>
   </section>
-
+  
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-content">
@@ -140,5 +162,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
