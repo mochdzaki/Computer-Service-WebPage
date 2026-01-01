@@ -14,9 +14,9 @@
   <header class="navbar">
     <div class="logo">ASTRO SERVICE</div>
     <nav>
-      <a href="#services">Service</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
+      <a href="#services" class="nav">Service</a>
+      <a href="#about" class="nav">About Us</a>
+      <a href="#contact" class="nav">Contact Us</a>
       <a href="Login.html" class="login">Login</a>
     </nav>
   </header>
@@ -121,41 +121,63 @@
   </section>
   
   <!-- PROCESS -->
-  <section class="process">
-    <div class="process-header">
-      <h2>How Does The Process Work<br>To Provide Service?</h2>
-  
-      <div class="process-controls">
-        <button onclick="scrollProcess(-1)">‹</button>
-        <button onclick="scrollProcess(1)">›</button>
+  <section class="process" id="processSection">
+    <div class="proc-title">
+      <h2>How Does The Process Work To Provide Service?</h2>
+      <div>
+        <button class="proc-btn prev" id="procPrev">&#10094;</button>
+        <button class="proc-btn next" id="procNext">&#10095;</button>
       </div>
     </div>
-  
-    <div class="scroll-container" id="processContainer">
-      <div class="process-scroll">
-        <div class="process-card">Step 1<br>Contact Us</div>
-        <div class="process-card">Step 2<br>Diagnosis</div>
-        <div class="process-card">Step 3<br>Repair</div>
-        <div class="process-card">Step 4<br>Testing</div>
+    <div class="process-wrapper">
+      
+      <div class="process-grid" id="processGrid">
+        <div class="process-card">
+          <h3>Step 1</h3>
+          <h4>Contact Us Or Bring Your Device</h4>
+          <p>Get in touch with us through our contact channels or visit our service center with your device for assistance.</p>
+        </div>
+        <div class="process-card">
+          <h3>Step 2</h3>
+          <h4>Diagnosis And Evaluation</h4>
+          <p>Our technicians perform a thorough inspection to identify the issue and determine the most effective solution.</p>
+        </div>
+        <div class="process-card">
+          <h3>Step 3</h3>
+          <h4>Repair Approval</h4>
+          <p>We provide a clear explanation of the problem, repair process, and cost, and proceed only after your approval.</p>
+        </div>
+        <div class="process-card">
+          <h3>Step 4</h3>
+          <h4>Professional Repair Process</h4>
+          <p>Repairs are carried out by experienced technicians using proper tools and tested procedures.</p>
+        </div>
+        <div class="process-card">
+          <h3>Step 5</h3>
+          <h4>Testing and Device Handover</h4>
+          <p>The device is fully tested to ensure optimal performance before being returned ready for use.</p>
+        </div>
       </div>
-    </div>
-  
-    <div class="scroll-progress">
-      <span id="processProgress"></span>
+
     </div>
   </section>
   
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-content">
-      <h2>Contact Us <span>Today</span></h2>
-      <p>
-        Get in touch with us during our business hours for computer repair,
-        diagnosis, or consultation.
-      </p>
-      <div class="contact-buttons">
-        <button class="btn-whatsapp">WhatsApp</button>
-        <button class="btn-primary">Try Our AI</button>
+      <div class="contact-title">
+        <h1>Contact Us <span>Today</span></h1>
+        <p>
+          Get in touch with us during our business hours for computer repair,
+          diagnosis, or consultation.
+        </p>
+      </div>
+      <div class="contact-subtitle">
+        <p>Get A Free Consultation</p>
+        <div class="contact-buttons">
+          <button class="btn-whatsapp">WhatsApp</button>
+          <button class="btn-primary">Try Our AI</button>
+        </div>
       </div>
     </div>
   </section>

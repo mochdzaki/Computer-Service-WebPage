@@ -41,6 +41,14 @@ body {
   transition: 0.4s;
 }
 
+.nav:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(to bottom, #fff, #ffd6d6);
@@ -76,7 +84,7 @@ body {
   background: red;
   color: white;
   border: none;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -120,7 +128,8 @@ body {
 }
 
 .card {
-  border: 1px solid red;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
   border-radius: 10px;
   padding: 40px 20px;
 }
@@ -158,14 +167,24 @@ body {
   margin: 20px 0;
 }
 
+.section-tag {
+  color: red;
+  margin-bottom: 20px;
+}
+
 /* SERVICES */
  .services {
   padding: 150px 60px;
   text-align: center;
+  background-color: #f1f1f1;
 }
 
 .services span {
   color: red;
+}
+
+.services h2 {
+  margin: 10px 0;
 }
 
 /* .service-card {
@@ -185,6 +204,7 @@ body {
   scroll-snap-type: x mandatory; /* Makes cards 'snap' into place */
   padding-bottom: 20px;
   scrollbar-width: none; /* Hide default scrollbar Firefox */
+  margin-top: 20px;
 }
 
 .service-grid::-webkit-scrollbar {
@@ -197,10 +217,15 @@ body {
   scroll-snap-align: center;
   flex-shrink: 0;
   /* Keep your existing card styles here */
-  background: #f9f9f9;
+  background: #fff;
   padding: 30px;
-  border: 1px solid red;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 2px solid #eee;
   border-radius: 10px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
 }
 
 /* 2. Custom Scrollbar Styling */
@@ -215,7 +240,7 @@ body {
 
 .scrollbar-segment {
   width: 40px; /* Width of each half */
-  height: 6px;
+  height: 5px;
   background-color: #ddd; /* Inactive color */
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -235,54 +260,121 @@ body {
 }
 
 /* PROCESS */
-.process-scroll {
+.process {
+  padding: 150px 60px;
+  text-align: center;
+}
+
+.proc-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.process-wrapper {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.process-grid {
   display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.process-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .process-card {
-  scroll-snap-align: start;
-  min-width: 320px;
+  min-width: 500px; /* Adjust based on your design preference */
+  min-height: 200px;
+  background: #ffffff;
   padding: 30px;
-  background: #f8f8f8;
-  border-radius: 20px;
-  flex-shrink: 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 2px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-/* Custom scrollbar */
-.process-scroll-wrapper::-webkit-scrollbar {
-  height: 6px;
+.process-card p {
+  text-align: start;
 }
 
-.process-scroll-wrapper::-webkit-scrollbar-thumb {
-  background: #ff8c7d;
-  border-radius: 10px;
+/* Arrow Buttons */
+.proc-btn {
+  background: #2c3e50; /* Adjust color to your theme */
+  color: white;
+  border: none;
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  padding: 10px 14px;
 }
 
-.process-scroll-wrapper::-webkit-scrollbar-track {
-  background: #ddd;
-}
-
+.proc-btn:hover { background: #34495e; transform: scale(1.1); }
+.prev { left: -10px; }
+.next { right: -10px; }
 
 /* CONTACT */
 .contact {
   background: #000;
   color: #fff;
-  padding: 60px;
+  padding: 100px 60px;
 }
 
 .contact span {
   color: red;
 }
 
+.contact-content {
+  display: flex;
+}
+
+.contact-content h1{
+  font-size: 45px;
+}
+
+.contact-title p {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
 .contact-buttons button {
   margin-right: 10px;
 }
 
+.contact-subtitle {
+  margin: 0 auto;
+}
+
+.contact-subtitle p {
+  max-width: 500px;
+  margin: 10px 0;
+} 
+
 .btn-whatsapp {
   background: white;
   color: black;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #25D366;
+  color: white;
+  transition: 0.4s;
 }
